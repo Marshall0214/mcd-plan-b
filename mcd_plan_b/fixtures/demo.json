@@ -1,0 +1,67 @@
+{
+  "mode": "demo",
+  "request": {
+    "budget_cents": 3000,
+    "allow_store_change": true,
+    "excluded_tags": [],
+    "required_slots": [
+      {"slot": "main", "tags": ["chicken"]},
+      {"slot": "drink", "tags": ["sugar_free"]}
+    ]
+  },
+  "baseline": {
+    "store_code": "DEMO-A",
+    "items": [
+      {"slot": "main", "code": "DEMO-GRILL", "name": "烤鸡堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+      {"slot": "drink", "code": "DEMO-ZERO-M", "name": "无糖汽水中杯（虚构）", "quantity": 1, "tags": ["sugar_free"]},
+      {"slot": "side", "code": "DEMO-FRIES", "name": "薯条（虚构）", "quantity": 1, "tags": []}
+    ]
+  },
+  "offers": [
+    {
+      "id": "original", "store_code": "DEMO-A", "store_name": "演示门店 A", "available": true, "total_cents": 3600,
+      "items": [
+        {"slot": "main", "code": "DEMO-GRILL", "name": "烤鸡堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+        {"slot": "drink", "code": "DEMO-ZERO-M", "name": "无糖汽水中杯（虚构）", "quantity": 1, "tags": ["sugar_free"]},
+        {"slot": "side", "code": "DEMO-FRIES", "name": "薯条（虚构）", "quantity": 1, "tags": []}
+      ]
+    },
+    {
+      "id": "keep-main", "store_code": "DEMO-A", "store_name": "演示门店 A", "available": true, "total_cents": 2900,
+      "items": [
+        {"slot": "main", "code": "DEMO-GRILL", "name": "烤鸡堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+        {"slot": "drink", "code": "DEMO-ZERO-M", "name": "无糖汽水中杯（虚构）", "quantity": 1, "tags": ["sugar_free"]}
+      ]
+    },
+    {
+      "id": "replace-main", "store_code": "DEMO-A", "store_name": "演示门店 A", "available": true, "total_cents": 2200,
+      "items": [
+        {"slot": "main", "code": "DEMO-CHICKEN", "name": "经典鸡肉堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+        {"slot": "drink", "code": "DEMO-ZERO-S", "name": "无糖汽水小杯（虚构）", "quantity": 1, "tags": ["sugar_free"]}
+      ]
+    },
+    {
+      "id": "combo-swap", "store_code": "DEMO-A", "store_name": "演示门店 A", "available": true, "total_cents": 2690,
+      "items": [
+        {"slot": "main", "code": "DEMO-SPICY", "name": "风味鸡腿堡（虚构）", "quantity": 1, "tags": ["chicken", "spicy"]},
+        {"slot": "drink", "code": "DEMO-ZERO-M", "name": "无糖汽水中杯（虚构）", "quantity": 1, "tags": ["sugar_free"]},
+        {"slot": "side", "code": "DEMO-FRIES", "name": "薯条（虚构）", "quantity": 1, "tags": []}
+      ]
+    },
+    {
+      "id": "other-store", "store_code": "DEMO-B", "store_name": "演示门店 B", "available": true, "total_cents": 2980,
+      "items": [
+        {"slot": "main", "code": "DEMO-GRILL", "name": "烤鸡堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+        {"slot": "drink", "code": "DEMO-ZERO-M", "name": "无糖汽水中杯（虚构）", "quantity": 1, "tags": ["sugar_free"]},
+        {"slot": "side", "code": "DEMO-FRIES", "name": "薯条（虚构）", "quantity": 1, "tags": []}
+      ]
+    },
+    {
+      "id": "sugary-cheap", "store_code": "DEMO-A", "store_name": "演示门店 A", "available": true, "total_cents": 1900,
+      "items": [
+        {"slot": "main", "code": "DEMO-CHICKEN", "name": "经典鸡肉堡（虚构）", "quantity": 1, "tags": ["chicken"]},
+        {"slot": "drink", "code": "DEMO-SUGAR", "name": "含糖汽水（虚构）", "quantity": 1, "tags": ["sugary"]}
+      ]
+    }
+  ]
+}
